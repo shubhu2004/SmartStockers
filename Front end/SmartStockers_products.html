@@ -1,0 +1,320 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>SmartStockers - Products</title>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link rel = "icon" href = "logo.png" type = "image/x-icon"> 
+       <link rel = "stylesheet" href="./styles/navbar.css">
+       <link rel="stylesheet" href="./styles/search_box.css">
+       <link rel="stylesheet" href="./styles/productpage.css">
+      
+       
+   </head>
+   <body>
+       
+       <!-- <div id="header">
+           <img src="//assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/diwali-groww-white.a851baed.gif">
+           <div id="searchBox">
+               <i class="material-icons">search</i>
+               <input type="text" placeholder="What are you looking for today?">
+           </div>
+           <div id="loginBtn">
+               <div>Login/Register</div>
+           </div>
+       </div> -->
+
+    <nav class="max-w">
+        <div class="nav-div">
+            <div><a href="SmartStockers_home.html"><img class=""
+                        src="logo.png"
+                        width="180" height="150" alt="SmartStockers Logo" itemprop="logo"></a>
+            </div>
+
+            <div class="c-search">
+                <i class="material-icons">search</i><input type="search" id="search"
+                    placeholder="What are you looking for today?" />
+            </div>
+
+            <div id="thirdBox">
+                <a href="SmartStockers_signup.html"><button id="login-btn">Login/Register</button></a></li>
+                <div id="userAcc" class="dontDisplay">
+                    <img id="user" src="https://www.shareicon.net/data/2016/05/26/771188_man_512x512.png">
+                    <a href="SmartStockers_cart.html"><i class="material-icons">shopping_cart</i></a></li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="logOutDropDown" class="noDropDownDisplay">
+        <div class="logout">Log Out</div>
+    </div>
+    <div id="dropDown" class="noDropDownDisplay"></div>
+
+    
+        <div class="productTileOne">
+        <h1 class="head"> All Mutual Funds</h2>
+
+            <select id="Sort" class="Sort" onchange="Sorting()">
+                <option > Sort by:</option>
+               <option value="Rat"> Rating- High To Low</option>
+               <option value="Ret"> Returns- High To Low</option>
+            </select>
+
+        </div>
+
+
+    <div id="container" class="container">
+        
+        <!-- Add your contents here -->
+        <div class="left">
+
+            <div class="filter_section_one">
+                <div class="filterHeading">FILTERS</div>
+                <div id="clearFilterBtn" onclick="clear_Tick()">Clear All</div>
+            </div>
+
+        <div class="filter_section scroll">
+        <div class="filterHeading">AMC</div>
+        <div class="box">
+            <input type="checkbox" value="Axis" class="checkbox amctick" id="axis">
+            <label for="axisMF">Axis Mutual Fund</label> 
+        </div>
+        <div class="box">
+          <input type="checkbox" value="ICICI" class="checkbox amctick" id="icici">
+          <label for="iciciMF">ICICI Prudential Technology</label> 
+      </div>
+      <div class="box">
+          <input type="checkbox" value="HDFC" class="checkbox amctick" id="hdfc">
+          <label for="hdfcMF">HDFC</label> 
+      </div>
+      <div class="box">
+        <input type="checkbox" value="TATA" class="checkbox amctick" id="tata">
+        <label for="tata">TATA Digital India</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="Paragh Parikh" class="checkbox amctick" id="">
+        <label for="">Paragh Parikh</label> 
+    </div>
+   
+    <div class="box">
+        <input type="checkbox" value="UTI" class="checkbox amctick" id="">
+        <label for="">UTI Flexi Cap</label> 
+    </div> 
+    <div class="box">
+        <input type="checkbox" value="Kotak" class="checkbox amctick" id="">
+        <label for="">Kotak Bluechip Funds</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="Aditya Birla" class="checkbox amctick" id="">
+        <label for="">Aditya Birla Sun Life</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="Nippon India Pharma" class="checkbox amctick" id="">
+        <label for="">Nippon India Pharma</label> 
+    </div>
+    <div class="box">
+        <input type="checkbox" value="SBI" class="checkbox amctick" id="">
+        <label for="">SBI Technology Oppurtunities Fund</label> 
+    </div>
+
+
+ </div> 
+
+
+ <div class="filter_section cat">
+    <div class="filterHeading ">Category</div>
+    <div class="box">
+        <input type="checkbox" value="Debt" class="checkbox c_tick" >
+        <label for="">Debt</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="Equity" class="checkbox  c_tick" >
+      <label for="">Equity</label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="Hybrid" class="checkbox  c_tick" >
+      <label for="">Hybrid</label> 
+  </div>
+  <div class="box">
+    <input type="checkbox" value="others" class="checkbox  c_tick" >
+    <label for="">Others</label> 
+</div>
+</div> 
+
+
+<div class="filter_section">
+    <div class="filterHeading">Risk</div>
+    <div class="box">
+        <input type="checkbox" value="Low Risk" class="checkbox R_tick" >
+        <label for="">Low</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="Moderate Risk" class="checkbox R_tick" >
+      <label for="">Moderate </label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="High Risk" class="checkbox R_tick" >
+      <label for="">High</label> 
+  </div>
+ 
+</div> 
+
+<div class="filter_section">
+    <div class="filterHeading">Fund Size</div>
+    <div class="box">
+        <input type="checkbox" value="2" class="checkbox F_tick" >
+        <label for="">Upto 1,000cr</label> 
+    </div>
+    <div class="box">
+      <input type="checkbox" value="4" class="checkbox F_tick" >
+      <label for="">Upto 2,000cr </label> 
+  </div>
+  <div class="box">
+      <input type="checkbox" value="10" class="checkbox F_tick" >
+      <label for="">Upto 5,000cr</label> 
+  </div>
+  <div class="box">
+    <input type="checkbox" value="20" class="checkbox F_tick" >
+    <label for="">Upto 10,000cr</label> 
+</div>
+ 
+</div> 
+
+
+
+</div>
+
+ 
+    
+ <div class="right" id="right"></div>
+
+
+    </div>
+
+
+
+
+    
+      <!-- -- footer - (START)-- -->q
+
+      <div id="footer" style="margin-top:100px;">
+
+        <div class="cover1">
+            <div class="container max-w" style="padding-top: 30px;">
+
+                <div class="footer-1" id="fot-section-1">
+                    <ul>
+                        <li style="margin:17px 0 17px -10px; cursor:pointer"><img
+                                src="WhatsApp_Image_2023-04-21_at_11.32.25-removebg-preview__1_-removebg-preview.png"
+                                width="180" height="150" alt="SmartStockers Logo" itemprop="logo"> </li>
+                        <li>2nd Year Students Chitkara University</li>
+                        <li>Branch Cse Kalujhanda Barotiwala</li>
+                        <li>Himachal Pradesh 172003 </li>  
+                        <li>
+                            <u style="cursor:pointer">Contact Us</u> 
+                        </li> 
+ 
+                        <li>
+                            <div class="socialMedia" style="margin-top:20px; margin-left:-10px">
+                                <a href="https://www.facebook.com/profile.php?id=100042162152682">
+                                    <img class="https://www.facebook.com/profile.php?id=100042162152682"
+                                        src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/fb_icon_groww.1c94e937.svg"
+                                        width="40" height="30" alt="SmartStockers FB Page">
+                                </a>
+                                <a href="https://twitter.com/Shubham80168999?t=lh7QFw2HZnj-QwgfWXP9oA&s=09">
+                                    <img class=""
+                                        src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/twitter_icon_groww.4cb988f6.svg"
+                                        width="40" height="30" alt="SmartStockers Twitter Page">
+                                </a>
+                                <a href="https://youtube.com/@Sxm">
+                                    <img class=""
+                                        src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/yt_icon_groww.ec96b677.svg"
+                                        width="40" height="30" alt="Youtube SmartStockers">
+                                </a>
+                                <a href="https://instagram.com/i_sushant__?igshid=MTIyMzRjYmRlZg==">
+                                    <img class="https://instagram.com/i_sushant__?igshid=MTIyMzRjYmRlZg=="
+                                        src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/instagram_icon_groww.0454c1a2.svg"
+                                        width="40" height="30" alt="SmartStockers Instagram Page">
+                                </a>
+                                <a href="https://www.linkedin.com/feed/">
+                                    <img class=""
+                                        src="https://assets-netstorage.groww.in/web-assets/billion_groww_desktop/prod/build/client/images/linkedin_icon_groww.b15f8240.svg"
+                                        width="40" height="30" alt="SmartStockers Linkedin Page">
+                          
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="fot-section-2"
+                    style="display:flex; justify-content:space-between;  margin-top:17px;">
+                    <div class="footer-2" style="padding-left:32px">
+                        <ul>
+                            <li class="fot-top-heading"> PRODUCTS </li>
+                            <li>Stocks</li>
+                            <li>Future & Options</li>
+                            <li>Mutual Funds</li>
+                            <li>Fixed Deposite</li>
+                            <li>US Stocks</li>
+                            <img src="">
+                        </ul>
+                    </div>
+
+                    <div class="footer-3">
+                        <ul>
+                            <li class="fot-top-heading">SmartStockers</li>
+                            <li>About Us</li>
+                            <li>Pricing</li>
+                            <li>Blog</li>
+                            <li>Media & Press</li>
+                            <li>Careers</li>
+                            <li>Help and Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-4">
+
+                        <ul>
+                            <li class="fot-top-heading"> QUICK LINKS</li>
+                            <li>AMC Mutual Funds</li>
+                            <li>Calculators</li>
+                            <li>Glossary</li>
+                            <li>Open Demat Account</li>
+                            <li>SmartStockers Digest</li>
+                            <li>Sitemap</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <section class="max-w">
+                <!-- -- underline-- -->
+
+                <div class="footerLine"></div>
+
+
+                   
+          
+            </section>
+
+        </div>
+
+    </div>
+
+    <!-- -- footer - (END)-- -->
+   
+</body>
+</html>
+
+<script src="./scripts/productapp.js">
+</script>
+
+<script src="./scripts/search_box.js"></script>
+<script src="./scripts/changeNavbar.js"></script>
